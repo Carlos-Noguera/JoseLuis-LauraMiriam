@@ -1,0 +1,226 @@
+/* -------- Tipografía Base -------- */
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    color: #222;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+}
+
+
+/* -------- HERO -------- */
+.header {
+    background-image: url('./img/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fadeInUp 1.5s ease-out;  /* Añadimos animación al Hero */
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+.heading {
+    color: #fff;
+    font-family: 'Caveat', cursive;
+    font-size: 5em;
+    margin: 0;
+    z-index: 2;
+    text-shadow: 0 0 12px #000;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards; /* Animación para el encabezado */
+}
+
+.heading-subtext {
+    font-family: 'Caveat', cursive;
+    color: #fff;
+    font-size: 2em;
+    z-index: 2;
+    margin-top: .2em;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards; /* Animación para el subtítulo */
+}
+
+/* Animaciones generales de entrada */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------- Secciones -------- */
+
+.section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2em 2em;
+    line-height: 1.7;
+    margin-bottom: 3em; /* Aquí se mantiene el espacio entre las secciones */
+}
+
+.sub-heading {
+    font-family: 'Caveat', cursive;
+    font-size: 3.4em;
+    margin: 0;
+    color: #8c6b48;
+}
+
+.divider {
+    width: 130px;
+    height: 2px;
+    background: #c8a97e;
+    margin: 15px auto 30px;
+    opacity: .7;
+    border-radius: 5px;
+}
+
+/* -------- Detalles -------- */
+
+.details {
+    margin-bottom: 4em; /* Aquí también se mantiene el espacio entre los elementos dentro de las secciones */
+}
+
+.details-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-top: .5em;
+    color: #8c6b48;
+}
+
+.fas {
+    font-size: 2.6em;
+    color: #c8a97e;
+    opacity: 0.95;
+}
+
+/* Animaciones de las secciones */
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all .8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -------- Botones -------- */
+.maps-btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: .9em 1.8em;
+    background: #c8a97e;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+.maps-btn:hover {
+    background: #a7855f;
+    transform: scale(1.1);
+}
+
+/* -------- Imagen -------- */
+.resort-image {
+    width: 100%;
+    border-radius: 14px;
+    margin-top: 1em;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards; /* Animación para la imagen */
+}
+
+/* -------- Iconos -------- */
+.fas {
+    font-size: 2.6em;
+    color: #c8a97e;
+    opacity: 0.95;
+}
+
+/* -------- Animaciones de Scroll -------- */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all .8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* -------- Botón Confirmar Asistencia -------- */
+.confirm-btn {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0.8em 2.5em;
+    background: #c8a97e;  /* Color cálido elegante */
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 40px;  /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+    transition: all 0.3s ease;  /* Transición suave */
+    cursor: pointer;
+}
+
+.confirm-btn i {
+    font-size: 1.4em;
+    margin-right: 0.8em;
+    color: white;  /* Color blanco para el ícono */
+}
+
+.confirm-btn:hover {
+    background: #a7855f;  /* Color más oscuro en hover */
+    transform: translateY(-2px);  /* Ligeramente más elevado en hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  /* Sombra más pronunciada en hover */
+}
+
+.confirm-btn:active {
+    transform: translateY(1px);  /* Efecto de "clic" */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);  /* Sombra más suave al presionar */
+}
+
+
+/* -------- Responsive -------- */
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 3.8em;
+    }
+
+    .header {
+        height: 50vh;
+    }
+}

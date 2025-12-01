@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Renovación de Votos</title>
+
+    <link rel="stylesheet" type="text/css" href="theme.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+   <audio autoplay loop>
+    <source src="https://www.youtube.com/watch?v=CvFH_6DNRCY" type="audio/mp3">
+  </audio>
+
+    <!-- HERO -->
+    <header class="header fade-in">
+      <h1 class="heading">
+        José Luis <br> y <br> Laura Miriam
+      </h1>
+      <span class="heading-subtext">30 Años de Amor</span>
+    </header>
+
+    <!-- Sección 1 -->
+    <section class="section fade-in">
+      <h2 class="sub-heading">30 Aniversario</h2>
+      <div class="divider"></div>
+      <p>
+        Tienen la inmensa alegría de invitarle a la Ceremonia de Renovación de Votos Matrimoniales,
+        con motivo de su 30 Aniversario de Bodas.
+      </p>
+      <p>
+        Deseamos dar gracias a Dios por la vida que nos ha permitido compartir, por el amor que nos une
+        y especialmente, por la bendición de nuestras amadas hijas.
+      </p>
+    </section>
+
+    <!-- SECCIÓN 2 -->
+    <section class="section fade-in">
+      <h2 class="sub-heading">La Sagrada Eucaristía</h2>
+      <div class="divider"></div>
+
+      <!-- Fecha -->
+      <div class="details fade-in">
+        <i class="fas fa-calendar-check"></i>
+        <h3 class="details-heading">Cuándo</h3>
+        <p>27 de Diciembre, 2025</p>
+        <p>5:00 p.m.</p>
+      </div>
+
+      <!-- Iglesia -->
+      <div class="details fade-in">
+        <i class="fas fa-church"></i>
+        <h3 class="details-heading">Iglesia</h3>
+        <p>Calle Calmecac y Tecacalo, Manzana 19,<br>
+          Col. Adolfo Ruíz Cortínez, Alcaldía Coyoacán, C.P. 04350.
+        </p>
+
+        <!-- Botón MAPS -->
+        <a class="maps-btn"
+           href="https://www.google.com/maps/search/?api=1&query=Calle+Calmecac+y+Tecacalo+Coyoacán"
+           target="_blank">
+           Abrir en Google Maps
+        </a>
+      </div>
+
+      <!-- Recepción -->
+      <div class="details fade-in">
+        <i class="fas fa-glass-cheers"></i>
+        <h3 class="details-heading">Recepción</h3>
+        <p>
+          Después de la ceremonia, será un honor contar con su presencia para compartir nuestra dicha en:
+        </p>
+        <p>San Gabriel número 49, Pedregal de Santa Úrsula, C.P. 04600.</p>
+
+        <a class="maps-btn"
+           href="https://www.google.com/maps/search/?api=1&query=San+Gabriel+49+Pedregal+de+Santa+Ursula"
+           target="_blank">
+           Abrir en Google Maps
+        </a>
+      </div>
+    </section>
+    <!-- Caja para Confirmar Asistencia -->
+    <section class="confirmation-box fade-in">
+      <div class="confirmation-content">
+        <h2 class="sub-heading">¡Confirmar Asistencia!</h2>
+        <div class="divider"></div>
+
+        <!-- Botón Confirmar Asistencia -->
+        <a class="confirm-btn" href="https://wa.me/5651798104?text=¡Confirmo%20mi%20asistencia%20a%20la%20Renovación%20de%20Votos%20de%20José%20Luis%20y%20Laura%20Miriam!" target="_blank">
+          <i class="fab fa-whatsapp"></i> Confirmar
+        </a>
+      </div>
+    </section>
+    <br>
+    <br>
+
+    <!-- Animaciones -->
+     <script>
+      document.addEventListener("scroll", () => {
+        document.querySelectorAll('.fade-in').forEach(el => {
+          const top = el.getBoundingClientRect().top;
+          if (top < window.innerHeight - 50) {
+            el.classList.add('visible');
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>
