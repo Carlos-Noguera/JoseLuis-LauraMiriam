@@ -98,14 +98,11 @@
 
     <!-- Animaciones -->
      <script>
-      document.addEventListener("scroll", () => {
-        document.querySelectorAll('.fade-in').forEach(el => {
-          const top = el.getBoundingClientRect().top;
-          if (top < window.innerHeight - 50) {
-            el.classList.add('visible');
-          }
-        });
-      });
+      window.onload = () => {
+          document.querySelectorAll('.fade-in').forEach(el => {
+              el.classList.add('visible');  // Activa la clase visible cuando la página carga
+          });
+      };
     </script>
 
   </body>
