@@ -98,11 +98,21 @@
 
     <!-- Animaciones -->
      <script>
-      window.onload = () => {
-          document.querySelectorAll('.fade-in').forEach(el => {
-              el.classList.add('visible');  // Activa la clase visible cuando la página carga
-          });
-      };
+      document.addEventListener("DOMContentLoaded", () => {
+
+      const elements = document.querySelectorAll('.fade-in');
+    
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Evita repetir la animación
+          }
+        });
+      }, { threshold: 0.2 });
+    
+      elements.forEach(el => observer.observe(el));
+    });
     </script>
 
   </body>
